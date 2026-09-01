@@ -1,0 +1,33 @@
+name: Java Static Analysis
+
+on:
+  push:
+    branches: [ "main" ]
+
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+
+  static-analysis:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup java # Install Java on the runner
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'adopt'
+          # The distribution of Java to install. In this case, it specifies the AdoptOpenJDK distribution.
+          # See https://github.com/actions/setup-java?tab=readme-ov-file#supported-distributions for supported distributions.
+          java-version: '21'  # The version of Java to install in the job runner.
+
+      - name: Compile project
+        run: mvn clean compile
+
+      - name: Run SpotBugs
+        run: mvn spotbugs:check
