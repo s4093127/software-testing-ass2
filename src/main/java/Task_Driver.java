@@ -1,4 +1,4 @@
-// This code has been taken from public project on Github.
+package src.main.java;// This code has been taken from public project on Github.
 //https://github.com/Adan-Asim/Java-Projects/tree/main/Bank%20Management%20System
 
 import java.util.*;
@@ -77,11 +77,11 @@ class Bank
 	{
 		Scanner input = new Scanner(System.in);
 
-		System.out.print("\nEnter name of Account Holder: ");
+		System.out.print("\nEnter name of src.main.java.Account Holder: ");
 		String n = input.nextLine();
-		System.out.print("Enter an 8 digit Account Number (contact manager for its allocation): ");
+		System.out.print("Enter an 8 digit src.main.java.Account Number (contact manager for its allocation): ");
 		int a = input.nextInt();
-		System.out.print("Enter PIN for Account Holder: ");
+		System.out.print("Enter PIN for src.main.java.Account Holder: ");
 		String p = input.next();
 		System.out.print("Default amount of 1000 is already added to the account, to add more money, write that amount else enter zero: ");
 		double am = input.nextDouble();
@@ -108,7 +108,7 @@ class Bank
 
 		if(sender_index == -1)
 		{
-			System.out.println("\n Account not Found");
+			System.out.println("\n src.main.java.Account not Found");
 			return;
 		}	
 
@@ -163,7 +163,7 @@ class Bank
 
 		if(person_index == -1)
 		{
-			System.out.println("\n Account not Found");
+			System.out.println("\n src.main.java.Account not Found");
 			return;
 		}	
 
@@ -186,7 +186,7 @@ class Bank
 		for(int i = 0; i<AL.size(); i++)
 		{
 			System.out.println("\nName: " + AL.get(i).getName());
-			System.out.println("Account Number: " + AL.get(i).getAccountNumber());
+			System.out.println("src.main.java.Account Number: " + AL.get(i).getAccountNumber());
 			System.out.println("Balance: " + AL.get(i).getAmount() + "\n");
 		}
 	}
@@ -235,11 +235,11 @@ class Task_Driver
 		Bank obj = new Bank();
 		obj.load();
 	try{	Scanner input = new Scanner(System.in);
-		System.out.println("\n**********************Welcome to our Bank*************************");
+		System.out.println("\n**********************Welcome to our src.main.java.Bank*************************");
 		int choice = 0;
 		while(choice != 5)
 		{
-			System.out.println("\n1 - Create new Account");
+			System.out.println("\n1 - Create new src.main.java.Account");
 			System.out.println("2 - Transfer money from an existing account to another existing account");
 			System.out.println("3 - Withdraw money from existing account");
 			System.out.println("4 - Print all existing accounts");
@@ -250,7 +250,7 @@ class Task_Driver
 			if(choice == 1)
 			{
 				obj.addNewRecord();
-				System.out.println("\nAccount Created Successfully");
+				System.out.println("\nsrc.main.java.Account Created Successfully");
 			}
 			else if(choice == 2)
 			{
